@@ -1,0 +1,110 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #e0e0e0, #c6c6c6);
+}
+
+/* Main container */
+.notification-container {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Grid layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.notification-box {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 300px;
+  overflow-y: auto;
+}
+
+.notification-box h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.notification-list {
+  margin-top: 10px;
+}
+
+.notification {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+}
+
+.notification span {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.notification-box.incoming .notification {
+  background-color: #e1e1e1;
+}
+
+.notification-box.outgoing .notification {
+  background-color: #d1e7ff;
+}
+
+/* Footer section with input */
+.notification-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.input-box {
+  flex-grow: 1;
+  padding: 12px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+}
+
+/* .send-button {
+  background-color: #0078d4;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  border: none;
+} */
+
+/* .send-button i {
+  color: #fff;
+  font-size: 16px;
+} */
+
+/* .send-button:hover {
+  background-color: #005bb5;
+} */
