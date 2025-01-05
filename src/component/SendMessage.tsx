@@ -1,9 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState, useEffect } from 'react';
 import { io } from 'socket.io-client';
 
 const SendNotification = () => {
   const [notification, setNotification] = useState('');
-  const [notifications, setNotifications] = useState([]);
+  const [notifications, setNotifications] = useState<string[]>([]);
   let currentSocketId;
 
   // Initialize Socket.io connection
@@ -46,7 +47,7 @@ const SendNotification = () => {
   };
 
   // Handle form submission
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
     if (!notification.trim()) return;
 
