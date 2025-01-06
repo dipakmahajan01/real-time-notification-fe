@@ -5,7 +5,6 @@ import { io } from 'socket.io-client';
 const SendNotification = () => {
   const [notification, setNotification] = useState('');
   const [notifications, setNotifications] = useState<string[]>([]);
-  let currentSocketId;
 
   // Initialize Socket.io connection
   useEffect(() => {
@@ -21,8 +20,6 @@ const SendNotification = () => {
 
     // Handle socket connection
     socket.on('connect', () => {
-      currentSocketId = socket.id;
-      console.log('Connected with ID:', currentSocketId);
       socket.emit('join-room');
     });
 
@@ -61,7 +58,7 @@ const SendNotification = () => {
     };
 
     // Show the message immediately in UI
-    addMessage(notification);
+    // addMessage(notification);
 
     // Clear input field
     setNotification('');
