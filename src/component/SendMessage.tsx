@@ -75,14 +75,15 @@ const SendNotification = () => {
     } catch (error) {
       console.error('Error:', error);
     }
-  };
+  };  
 
   return (
     <div className="min-h-screen flex items-center justify-center p-6">
       <div className="bg-white p-6 rounded shadow-md w-full max-w-4xl flex space-x-6">
         {/* Left Side: Input and Button */}
         <div className="w-1/2">
-          <h2 className="text-xl font-bold mb-4">Send Notification</h2>
+          <h2 className="text-xl font-bold mb-4">
+            Realtime Send Notification </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <input
               type="text"
